@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Concatenation &mdash; Python 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Operators" href="05_Operators.html" />
+    <link rel="prev" title="Datatypes in Python" href="03_datatypes.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_print%2Ccomments.html"><code class="docutils literal notranslate"><span class="pre">Comments</span> <span class="pre">and</span> <span class="pre">Print</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_datatypes.html">Datatypes in Python</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Concatenation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#string-concatenation">String Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-concatenation">List Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#tuple-concatenation">Tuple Concatenation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#program-example">Program Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#output">Output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#summary">Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05_Operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Conditional%20statements.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Exception%20handling.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Input%20from%20user.html">Input from the User in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_Example%20question.html">Example question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Define.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_inbuilt%20functions.html">Inbuilt Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_Looping.html">Looping in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_break%20and%20continue.html">break and continue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Example%20code.html">Example code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Strings.html">Data Structures and Algorithms: Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_file%20handling.html">File Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Example%20code.html">Example code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_Assignment.html">Assignment Question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19_Lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_Tuples.html">Tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_Sets.html">Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23_Regular%20expressions%20general.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24_Regex%20Python.html">Regular Expressions in Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Concatenation</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/04_concatanation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="concatenation">
+<h1>Concatenation<a class="headerlink" href="#concatenation" title="Link to this heading"></a></h1>
+<p>Concatenation in Python refers to the operation of joining two or more sequences end-to-end. This operation is most commonly used with strings but can also be applied to lists, tuples, and other sequence types.</p>
+<section id="string-concatenation">
+<h2>String Concatenation<a class="headerlink" href="#string-concatenation" title="Link to this heading"></a></h2>
+<p>### Using the <cite>+</cite> Operator</p>
+<p>The simplest way to concatenate strings in Python is by using the <cite>+</cite> operator.</p>
+<p>#### Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">str1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">str2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Hello</span> <span class="n">World</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When concatenating strings using the <cite>+</cite> operator, ensure that all operands are strings. Otherwise, you may encounter a TypeError.</p>
+</div>
+<p>#### Example of TypeError</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># This will raise a TypeError</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;The answer is &quot;</span> <span class="o">+</span> <span class="n">num</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Error:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">TypeError</span><span class="p">:</span> <span class="n">can</span> <span class="n">only</span> <span class="n">concatenate</span> <span class="nb">str</span> <span class="p">(</span><span class="ow">not</span> <span class="s2">&quot;int&quot;</span><span class="p">)</span> <span class="n">to</span> <span class="nb">str</span>
+</pre></div>
+</div>
+<p>#### Corrected Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Convert the number to a string</span>
+<span class="n">num</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="n">result</span> <span class="o">=</span> <span class="s2">&quot;The answer is &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">answer</span> <span class="ow">is</span> <span class="mi">42</span>
+</pre></div>
+</div>
+</section>
+<section id="list-concatenation">
+<h2>List Concatenation<a class="headerlink" href="#list-concatenation" title="Link to this heading"></a></h2>
+<p>Lists can be concatenated using the <cite>+</cite> operator.</p>
+<p>### Using the <cite>+</cite> Operator</p>
+<p>#### Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Be cautious when concatenating lists using the <cite>+</cite> operator, as it creates a new list. This can be inefficient for large lists.</p>
+</div>
+<p>#### Inefficient Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Concatenating large lists</span>
+<span class="n">large_list1</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">)]</span>
+<span class="n">large_list2</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">,</span> <span class="mi">200000</span><span class="p">)]</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">large_list1</span> <span class="o">+</span> <span class="n">large_list2</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>  <span class="c1"># Output: 200000</span>
+</pre></div>
+</div>
+</section>
+<section id="tuple-concatenation">
+<h2>Tuple Concatenation<a class="headerlink" href="#tuple-concatenation" title="Link to this heading"></a></h2>
+<p>Tuples can be concatenated using the <cite>+</cite> operator.</p>
+<p>### Using the <cite>+</cite> Operator</p>
+<p>#### Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">tuple2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">tuple1</span> <span class="o">+</span> <span class="n">tuple2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Since tuples are immutable, concatenating tuples using the <cite>+</cite> operator creates a new tuple.</p>
+</div>
+</section>
+<section id="program-example">
+<h2>Program Example<a class="headerlink" href="#program-example" title="Link to this heading"></a></h2>
+<p>Here’s a complete program that demonstrates concatenation with strings, lists, and tuples:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># String concatenation</span>
+<span class="n">str1</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s2">&quot;World&quot;</span>
+<span class="n">str_result</span> <span class="o">=</span> <span class="n">str1</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">str2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;String Concatenation:&quot;</span><span class="p">,</span> <span class="n">str_result</span><span class="p">)</span>
+
+<span class="c1"># List concatenation</span>
+<span class="n">list1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">list2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
+<span class="n">list_result</span> <span class="o">=</span> <span class="n">list1</span> <span class="o">+</span> <span class="n">list2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;List Concatenation:&quot;</span><span class="p">,</span> <span class="n">list_result</span><span class="p">)</span>
+
+<span class="c1"># Tuple concatenation</span>
+<span class="n">tuple1</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">tuple2</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+<span class="n">tuple_result</span> <span class="o">=</span> <span class="n">tuple1</span> <span class="o">+</span> <span class="n">tuple2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Tuple Concatenation:&quot;</span><span class="p">,</span> <span class="n">tuple_result</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>String Concatenation: Hello World
+List Concatenation: [1, 2, 3, 4, 5, 6]
+Tuple Concatenation: (1, 2, 3, 4, 5, 6)
+</pre></div>
+</div>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
+<p>Concatenation is a fundamental operation in Python that allows you to join sequences such as strings, lists, and tuples. By using the <cite>+</cite> operator, you can efficiently combine multiple sequences into one. Be mindful of data types and performance considerations when performing concatenation.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="03_datatypes.html" class="btn btn-neutral float-left" title="Datatypes in Python" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="05_Operators.html" class="btn btn-neutral float-right" title="Operators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Agnitej.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

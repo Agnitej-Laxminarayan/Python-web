@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Looping in Python &mdash; Python 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="break and continue" href="13_break%20and%20continue.html" />
+    <link rel="prev" title="Inbuilt Functions" href="11_inbuilt%20functions.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_print%2Ccomments.html"><code class="docutils literal notranslate"><span class="pre">Comments</span> <span class="pre">and</span> <span class="pre">Print</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_datatypes.html">Datatypes in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_concatanation.html">Concatenation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_Operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Conditional%20statements.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Exception%20handling.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Input%20from%20user.html">Input from the User in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_Example%20question.html">Example question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Define.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_inbuilt%20functions.html">Inbuilt Functions</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Looping in Python</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-looping">Introduction to Looping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-range">Introduction to <cite>range</cite></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13_break%20and%20continue.html">break and continue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Example%20code.html">Example code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Strings.html">Data Structures and Algorithms: Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_file%20handling.html">File Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Example%20code.html">Example code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_Assignment.html">Assignment Question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19_Lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_Tuples.html">Tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_Sets.html">Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23_Regular%20expressions%20general.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24_Regex%20Python.html">Regular Expressions in Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Looping in Python</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/12_Looping.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="looping-in-python">
+<span id="looping"></span><h1>Looping in Python<a class="headerlink" href="#looping-in-python" title="Link to this heading"></a></h1>
+<section id="introduction-to-looping">
+<h2>Introduction to Looping<a class="headerlink" href="#introduction-to-looping" title="Link to this heading"></a></h2>
+<p>Looping is a fundamental concept in programming that allows you to execute a block of code repeatedly. Python supports two types of loops: <code class="docutils literal notranslate"><span class="pre">for</span></code> loops and <code class="docutils literal notranslate"><span class="pre">while</span></code> loops.</p>
+<p><strong>`for` Loop</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over a sequence (such as a list, tuple, dictionary, set, or string) and executes the block of code for each item in the sequence.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">sequence</span><span class="p">:</span>
+    <span class="c1"># Code to execute</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterating over a list</span>
+<span class="n">fruits</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span> <span class="s2">&quot;banana&quot;</span><span class="p">,</span> <span class="s2">&quot;cherry&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">fruit</span> <span class="ow">in</span> <span class="n">fruits</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">fruit</span><span class="p">)</span>  <span class="c1"># Output: apple banana cherry</span>
+
+<span class="c1"># Iterating over a range of numbers</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  <span class="c1"># Output: 0 1 2 3 4</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong></p>
+<p>In the first example, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over the list <code class="docutils literal notranslate"><span class="pre">fruits</span></code> and prints each fruit. In the second example, the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop iterates over a range of numbers from 0 to 4 and prints each number.</p>
+<p><strong>`while` Loop</strong></p>
+<p>The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop executes a block of code as long as a specified condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">condition</span><span class="p">:</span>
+    <span class="c1"># Code to execute</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Printing numbers from 0 to 4</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>  <span class="c1"># Output: 0 1 2 3 4</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong></p>
+<p>In this example, the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop executes the block of code as long as <code class="docutils literal notranslate"><span class="pre">i</span></code> is less than 5. The value of <code class="docutils literal notranslate"><span class="pre">i</span></code> is incremented by 1 in each iteration.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is more suitable for iterating over a sequence.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is more suitable for repeating a block of code while a condition is <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>Be careful with <code class="docutils literal notranslate"><span class="pre">while</span></code> loops; if the condition never becomes <code class="docutils literal notranslate"><span class="pre">False</span></code>, it will result in an infinite loop.</p></li>
+</ul>
+</div>
+</section>
+<section id="introduction-to-range">
+<span id="range"></span><h2>Introduction to <cite>range</cite><a class="headerlink" href="#introduction-to-range" title="Link to this heading"></a></h2>
+<p>The <cite>range</cite> function in Python is used to generate a sequence of numbers. It is commonly used in loops to iterate over a sequence of numbers. The <cite>range</cite> function can take one, two, or three arguments:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">range(stop)</span></code>: Generates numbers from 0 up to, but not including, <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop)</span></code>: Generates numbers from <code class="docutils literal notranslate"><span class="pre">start</span></code> up to, but not including, <code class="docutils literal notranslate"><span class="pre">stop</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">range(start,</span> <span class="pre">stop,</span> <span class="pre">step)</span></code>: Generates numbers from <code class="docutils literal notranslate"><span class="pre">start</span></code> up to, but not including, <code class="docutils literal notranslate"><span class="pre">stop</span></code>, with a step value of <code class="docutils literal notranslate"><span class="pre">step</span></code>.</p></li>
+</ol>
+<p><strong>Syntax:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">range</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span>
+<span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">)</span>
+<span class="nb">range</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">stop</span><span class="p">,</span> <span class="n">step</span><span class="p">)</span>
+</pre></div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using range with one argument</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="c1"># Output: 0 1 2 3 4</span>
+
+<span class="nb">print</span><span class="p">()</span>  <span class="c1"># New line</span>
+
+<span class="c1"># Using range with two arguments</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="c1"># Output: 1 2 3 4 5</span>
+
+<span class="nb">print</span><span class="p">()</span>  <span class="c1"># New line</span>
+
+<span class="c1"># Using range with three arguments</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s2">&quot; &quot;</span><span class="p">)</span>  <span class="c1"># Output: 1 3 5 7 9</span>
+</pre></div>
+</div>
+<p><strong>Explanation:</strong></p>
+<p>In the example above, we use the <cite>range</cite> function in three different ways:
+- <code class="docutils literal notranslate"><span class="pre">range(5)</span></code> generates numbers from 0 to 4.
+- <code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">6)</span></code> generates numbers from 1 to 5.
+- <code class="docutils literal notranslate"><span class="pre">range(1,</span> <span class="pre">11,</span> <span class="pre">2)</span></code> generates numbers from 1 to 9 with a step of 2.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>The <cite>range</cite> function is often used in <code class="docutils literal notranslate"><span class="pre">for</span></code> loops to iterate over a sequence of numbers.</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>The <cite>stop</cite> value is not included in the generated sequence. That is 5,6,11 not included in the generated sequence.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="11_inbuilt%20functions.html" class="btn btn-neutral float-left" title="Inbuilt Functions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="13_break%20and%20continue.html" class="btn btn-neutral float-right" title="break and continue" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Agnitej.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

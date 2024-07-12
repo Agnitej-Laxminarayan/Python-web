@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lists &mdash; Python 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Dictionaries" href="20_Dictionaries.html" />
+    <link rel="prev" title="Assignment Question" href="18_Assignment.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_print%2Ccomments.html"><code class="docutils literal notranslate"><span class="pre">Comments</span> <span class="pre">and</span> <span class="pre">Print</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_datatypes.html">Datatypes in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_concatanation.html">Concatenation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_Operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Conditional%20statements.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Exception%20handling.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Input%20from%20user.html">Input from the User in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_Example%20question.html">Example question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Define.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_inbuilt%20functions.html">Inbuilt Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_Looping.html">Looping in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_break%20and%20continue.html">break and continue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Example%20code.html">Example code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="15_Strings.html">Data Structures and Algorithms: Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="16_file%20handling.html">File Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Example%20code.html">Example code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_Assignment.html">Assignment Question</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Lists</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-list">Creating a List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#accessing-list-items">Accessing List Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-list-items">Modifying List Items</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#adding-items-to-a-list">Adding Items to a List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#removing-items-from-a-list">Removing Items from a List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-comprehension">List Comprehension</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-methods">List Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-usage-of-list-methods">Example Usage of List Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="20_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_Tuples.html">Tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_Sets.html">Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23_Regular%20expressions%20general.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24_Regex%20Python.html">Regular Expressions in Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Lists</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/19_Lists.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="lists">
+<h1>Lists<a class="headerlink" href="#lists" title="Link to this heading"></a></h1>
+<p>A list is a collection which is ordered and changeable. In Python, lists are written with square brackets.</p>
+<section id="creating-a-list">
+<h2>Creating a List<a class="headerlink" href="#creating-a-list" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Creating a simple list</span>
+<span class="linenos">2</span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="linenos">3</span>
+<span class="linenos">4</span><span class="c1"># Creating a list with mixed data types</span>
+<span class="linenos">5</span><span class="n">mixed_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;Hello&quot;</span><span class="p">,</span> <span class="mf">3.14</span><span class="p">,</span> <span class="kc">True</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="accessing-list-items">
+<h2>Accessing List Items<a class="headerlink" href="#accessing-list-items" title="Link to this heading"></a></h2>
+<p>List items are indexed, the first item has index [0], the second item has index [1], etc.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Accessing items in a list</span>
+<span class="linenos">2</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>  <span class="c1"># Output: 1</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">mixed_list</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>  <span class="c1"># Output: Hello</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>List indices start at 0. Attempting to access an index that doesn’t exist will raise an IndexError.</p>
+</div>
+</section>
+<section id="modifying-list-items">
+<h2>Modifying List Items<a class="headerlink" href="#modifying-list-items" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Modifying items in a list</span>
+<span class="linenos">2</span><span class="n">my_list</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [1, 20, 3, 4, 5]</span>
+</pre></div>
+</div>
+</section>
+<section id="adding-items-to-a-list">
+<h2>Adding Items to a List<a class="headerlink" href="#adding-items-to-a-list" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># Using append() to add an item</span>
+<span class="linenos">2</span><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [1, 20, 3, 4, 5, 6]</span>
+<span class="linenos">4</span>
+<span class="linenos">5</span><span class="c1"># Using insert() to add an item at a specified index</span>
+<span class="linenos">6</span><span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="s2">&quot;new&quot;</span><span class="p">)</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [1, 20, &#39;new&#39;, 3, 4, 5, 6]</span>
+</pre></div>
+</div>
+</section>
+<section id="removing-items-from-a-list">
+<h2>Removing Items from a List<a class="headerlink" href="#removing-items-from-a-list" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="c1"># Using remove() to remove a specific item</span>
+<span class="linenos"> 2</span><span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="linenos"> 3</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [1, &#39;new&#39;, 3, 4, 5, 6]</span>
+<span class="linenos"> 4</span>
+<span class="linenos"> 5</span><span class="c1"># Using pop() to remove an item at a specified index</span>
+<span class="linenos"> 6</span><span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="linenos"> 7</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [1, &#39;new&#39;, 4, 5, 6]</span>
+<span class="linenos"> 8</span>
+<span class="linenos"> 9</span><span class="c1"># Using del to delete an item at a specified index</span>
+<span class="linenos">10</span><span class="k">del</span> <span class="n">my_list</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [&#39;new&#39;, 4, 5, 6]</span>
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The del statement can delete entire lists as well. Use with caution.</p>
+</div>
+</section>
+<section id="list-comprehension">
+<h2>List Comprehension<a class="headerlink" href="#list-comprehension" title="Link to this heading"></a></h2>
+<p>List comprehensions provide a concise way to create lists.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="c1"># List comprehension example</span>
+<span class="linenos">2</span><span class="n">squares</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)]</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">squares</span><span class="p">)</span>  <span class="c1"># Output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</span>
+</pre></div>
+</div>
+</section>
+<section id="list-methods">
+<h2>List Methods<a class="headerlink" href="#list-methods" title="Link to this heading"></a></h2>
+<p>Here are some common methods you can use with lists:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">append()</span></code>: Adds an element at the end of the list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">extend()</span></code>: Adds the elements of a list (or any iterable), to the end of the current list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">insert()</span></code>: Adds an element at the specified position</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">remove()</span></code>: Removes the first item with the specified value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pop()</span></code>: Removes the element at the specified position</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">clear()</span></code>: Removes all the elements from the list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">index()</span></code>: Returns the index of the first element with the specified value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">count()</span></code>: Returns the number of elements with the specified value</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sort()</span></code>: Sorts the list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reverse()</span></code>: Reverses the order of the list</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">copy()</span></code>: Returns a copy of the list</p></li>
+</ul>
+</section>
+<section id="example-usage-of-list-methods">
+<h2>Example Usage of List Methods<a class="headerlink" href="#example-usage-of-list-methods" title="Link to this heading"></a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="linenos"> 2</span>
+<span class="linenos"> 3</span><span class="c1"># Append</span>
+<span class="linenos"> 4</span><span class="n">my_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [3, 1, 4, 1, 5, 9, 2, 6]</span>
+<span class="linenos"> 6</span>
+<span class="linenos"> 7</span><span class="c1"># Extend</span>
+<span class="linenos"> 8</span><span class="n">my_list</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">])</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [3, 1, 4, 1, 5, 9, 2, 6, 7, 8]</span>
+<span class="linenos">10</span>
+<span class="linenos">11</span><span class="c1"># Insert</span>
+<span class="linenos">12</span><span class="n">my_list</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<span class="linenos">13</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [3, 1, 10, 4, 1, 5, 9, 2, 6, 7, 8]</span>
+<span class="linenos">14</span>
+<span class="linenos">15</span><span class="c1"># Remove</span>
+<span class="linenos">16</span><span class="n">my_list</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="linenos">17</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [3, 10, 4, 1, 5, 9, 2, 6, 7, 8]</span>
+<span class="linenos">18</span>
+<span class="linenos">19</span><span class="c1"># Pop</span>
+<span class="linenos">20</span><span class="n">my_list</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="linenos">21</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [3, 10, 4, 5, 9, 2, 6, 7, 8]</span>
+<span class="linenos">22</span>
+<span class="linenos">23</span><span class="c1"># Clear</span>
+<span class="linenos">24</span><span class="n">my_list</span><span class="o">.</span><span class="n">clear</span><span class="p">()</span>
+<span class="linenos">25</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: []</span>
+<span class="linenos">26</span>
+<span class="linenos">27</span><span class="c1"># Re-initializing for further examples</span>
+<span class="linenos">28</span><span class="n">my_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<span class="linenos">29</span>
+<span class="linenos">30</span><span class="c1"># Index</span>
+<span class="linenos">31</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="mi">9</span><span class="p">))</span>  <span class="c1"># Output: 5</span>
+<span class="linenos">32</span>
+<span class="linenos">33</span><span class="c1"># Count</span>
+<span class="linenos">34</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>  <span class="c1"># Output: 2</span>
+<span class="linenos">35</span>
+<span class="linenos">36</span><span class="c1"># Sort</span>
+<span class="linenos">37</span><span class="n">my_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="linenos">38</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [1, 1, 2, 3, 4, 5, 9]</span>
+<span class="linenos">39</span>
+<span class="linenos">40</span><span class="c1"># Reverse</span>
+<span class="linenos">41</span><span class="n">my_list</span><span class="o">.</span><span class="n">reverse</span><span class="p">()</span>
+<span class="linenos">42</span><span class="nb">print</span><span class="p">(</span><span class="n">my_list</span><span class="p">)</span>  <span class="c1"># Output: [9, 5, 4, 3, 2, 1, 1]</span>
+<span class="linenos">43</span>
+<span class="linenos">44</span><span class="c1"># Copy</span>
+<span class="linenos">45</span><span class="n">copied_list</span> <span class="o">=</span> <span class="n">my_list</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="linenos">46</span><span class="nb">print</span><span class="p">(</span><span class="n">copied_list</span><span class="p">)</span>  <span class="c1"># Output: [9, 5, 4, 3, 2, 1, 1]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="18_Assignment.html" class="btn btn-neutral float-left" title="Assignment Question" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="20_Dictionaries.html" class="btn btn-neutral float-right" title="Dictionaries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Agnitej.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

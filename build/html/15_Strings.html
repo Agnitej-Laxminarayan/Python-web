@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Structures and Algorithms: Strings &mdash; Python 1.0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=f2a433a1"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="File Handling" href="16_file%20handling.html" />
+    <link rel="prev" title="Example code" href="14_Example%20code.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Python
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_Introduction.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02_print%2Ccomments.html"><code class="docutils literal notranslate"><span class="pre">Comments</span> <span class="pre">and</span> <span class="pre">Print</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_datatypes.html">Datatypes in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_concatanation.html">Concatenation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_Operators.html">Operators</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06_Conditional%20statements.html">Conditional Statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07_Exception%20handling.html">Exception handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08_Input%20from%20user.html">Input from the User in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09_Example%20question.html">Example question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10_Define.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11_inbuilt%20functions.html">Inbuilt Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="12_Looping.html">Looping in Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="13_break%20and%20continue.html">break and continue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="14_Example%20code.html">Example code</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Structures and Algorithms: Strings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-to-strings">Introduction to Strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#strings-as-data-structures">Strings as Data Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-string-operations">Basic String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#string-methods">String Methods</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-string-operations">Advanced String Operations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-notes-and-warnings">Important Notes and Warnings</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="16_file%20handling.html">File Handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="17_Example%20code.html">Example code</a></li>
+<li class="toctree-l1"><a class="reference internal" href="18_Assignment.html">Assignment Question</a></li>
+<li class="toctree-l1"><a class="reference internal" href="19_Lists.html">Lists</a></li>
+<li class="toctree-l1"><a class="reference internal" href="20_Dictionaries.html">Dictionaries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="21_Tuples.html">Tuples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="22_Sets.html">Sets</a></li>
+<li class="toctree-l1"><a class="reference internal" href="23_Regular%20expressions%20general.html">Regular Expressions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="24_Regex%20Python.html">Regular Expressions in Python</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Python</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Data Structures and Algorithms: Strings</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/15_Strings.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="data-structures-and-algorithms-strings">
+<span id="dsa-strings"></span><h1>Data Structures and Algorithms: Strings<a class="headerlink" href="#data-structures-and-algorithms-strings" title="Link to this heading"></a></h1>
+<p>Data structure
+Definition - A data structure is a particular way of organizing, managing, and storing data in a computer so that it can be accessed and modified efficiently. Data structures define the relationship between data, the operations that can be performed on the data, and the ways in which the data can be manipulated.</p>
+<section id="introduction-to-strings">
+<h2>Introduction to Strings<a class="headerlink" href="#introduction-to-strings" title="Link to this heading"></a></h2>
+<p>Strings are a fundamental data type in Python and many other programming languages. They represent sequences of characters and are used to store and manipulate text. In Python, strings are immutable, meaning that once created, they cannot be changed.</p>
+</section>
+<section id="strings-as-data-structures">
+<h2>Strings as Data Structures<a class="headerlink" href="#strings-as-data-structures" title="Link to this heading"></a></h2>
+<p>Strings are also considered data structures because they store and manage collections of characters. As a data structure, a string provides various operations to access, manipulate, and process the characters it contains. This dual nature of strings as both a data type and a data structure makes them versatile and powerful tools in programming.</p>
+</section>
+<section id="basic-string-operations">
+<h2>Basic String Operations<a class="headerlink" href="#basic-string-operations" title="Link to this heading"></a></h2>
+<p><strong>Creating Strings:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Single quotes</span>
+<span class="n">str1</span> <span class="o">=</span> <span class="s1">&#39;Hello, World!&#39;</span>
+
+<span class="c1"># Double quotes</span>
+<span class="n">str2</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+
+<span class="c1"># Triple quotes for multi-line strings</span>
+<span class="n">str3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;This is a</span>
+<span class="s2">multi-line string.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<p><strong>Accessing Characters in a String:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python&quot;</span>
+<span class="n">first_char</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># &#39;P&#39;</span>
+<span class="n">last_char</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>  <span class="c1"># &#39;n&#39;</span>
+</pre></div>
+</div>
+<p><strong>String Concatenation:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the + operator</span>
+<span class="n">greeting</span> <span class="o">=</span> <span class="s2">&quot;Hello, &quot;</span> <span class="o">+</span> <span class="s2">&quot;World!&quot;</span>
+</pre></div>
+</div>
+<p><strong>String Repetition:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the * operator</span>
+<span class="n">repeat</span> <span class="o">=</span> <span class="s2">&quot;Python! &quot;</span> <span class="o">*</span> <span class="mi">3</span>  <span class="c1"># &#39;Python! Python! Python! &#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="string-methods">
+<h2>String Methods<a class="headerlink" href="#string-methods" title="Link to this heading"></a></h2>
+<p>Strings come with a variety of built-in methods for common operations.</p>
+<p><strong>Common String Methods:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Hello, World!&quot;</span>
+
+<span class="c1"># Convert to uppercase</span>
+<span class="n">upper_text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>  <span class="c1"># &#39;HELLO, WORLD!&#39;</span>
+
+<span class="c1"># Convert to lowercase</span>
+<span class="n">lower_text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>  <span class="c1"># &#39;hello, world!&#39;</span>
+
+<span class="c1"># Find a substring</span>
+<span class="n">position</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">)</span>  <span class="c1"># 7</span>
+
+<span class="c1"># Replace a substring</span>
+<span class="n">replaced_text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;World&quot;</span><span class="p">,</span> <span class="s2">&quot;Python&quot;</span><span class="p">)</span>  <span class="c1"># &#39;Hello, Python!&#39;</span>
+
+<span class="c1"># Check if a string starts with a substring</span>
+<span class="n">is_start</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>  <span class="c1"># True</span>
+
+<span class="c1"># Check if a string ends with a substring</span>
+<span class="n">is_end</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;!&quot;</span><span class="p">)</span>  <span class="c1"># True</span>
+</pre></div>
+</div>
+</section>
+<section id="advanced-string-operations">
+<h2>Advanced String Operations<a class="headerlink" href="#advanced-string-operations" title="Link to this heading"></a></h2>
+<p><strong>String Slicing:</strong></p>
+<p>String slicing allows you to extract a substring from a string.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Data Structures and Algorithms&quot;</span>
+<span class="n">substring</span> <span class="o">=</span> <span class="n">text</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="mi">16</span><span class="p">]</span>  <span class="c1"># &#39;Structures&#39;</span>
+</pre></div>
+</div>
+<p><strong>String Splitting and Joining:</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Splitting a string into a list of words</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Python is awesome&quot;</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>  <span class="c1"># [&#39;Python&#39;, &#39;is&#39;, &#39;awesome&#39;]</span>
+
+<span class="c1"># Joining a list of words into a single string</span>
+<span class="n">sentence</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>  <span class="c1"># &#39;Python is awesome&#39;</span>
+</pre></div>
+</div>
+<p><strong>String Formatting:</strong></p>
+<p>String formatting allows you to create strings with dynamic content.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Alice&quot;</span>
+<span class="n">age</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">intro</span> <span class="o">=</span> <span class="s2">&quot;My name is &quot;</span> <span class="o">+</span> <span class="n">name</span> <span class="o">+</span> <span class="s2">&quot; and I am &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">age</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; years old.&quot;</span>  <span class="c1"># &#39;My name is Alice and I am 30 years old.&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="important-notes-and-warnings">
+<h2>Important Notes and Warnings<a class="headerlink" href="#important-notes-and-warnings" title="Link to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Strings in Python are immutable. Once created, you cannot change the content of a string.</p></li>
+<li><p>String methods often return a new string instead of modifying the original string.</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<ul class="simple">
+<li><p>Be careful when accessing string indices. An <code class="docutils literal notranslate"><span class="pre">IndexError</span></code> will be raised if you try to access an index that is out of range.</p></li>
+<li><p>Using string concatenation (<code class="docutils literal notranslate"><span class="pre">+</span></code>) in loops can lead to performance issues. Consider using <code class="docutils literal notranslate"><span class="pre">str.join()</span></code> for better performance.</p></li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="14_Example%20code.html" class="btn btn-neutral float-left" title="Example code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="16_file%20handling.html" class="btn btn-neutral float-right" title="File Handling" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Agnitej.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
